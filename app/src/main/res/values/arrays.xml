@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="players_actions">
+        <item>收藏到歌单</item>
+    </string-array>
+</resources>

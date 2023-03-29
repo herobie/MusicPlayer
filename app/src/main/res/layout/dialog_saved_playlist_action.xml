@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_white"
+    android:minWidth="350dp"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/saved_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:backgroundTint="@color/semitransparent"
+        android:text="收藏"
+        android:textColor="@color/light_black"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/saved_rename"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:backgroundTint="@color/semitransparent"
+        android:text="重命名"
+        android:textColor="@color/light_black"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/saved_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:backgroundTint="#80FF0000"
+        android:text="删除"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+</LinearLayout>

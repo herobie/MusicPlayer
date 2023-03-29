@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/player_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/TopTitle"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/semitransparent"
+        android:backgroundTint="#FFCCCCCC"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/player_back"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:backgroundTint="@android:color/transparent"
+            app:srcCompat="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:background="@android:color/transparent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/player_title"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="歌曲名"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/player_artist"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="歌手"
+                android:textColor="@color/light_black"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/player_like"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.75"
+            android:backgroundTint="@android:color/transparent"
+            app:srcCompat="@drawable/ic_baseline_favorite_border_24" />
+
+        <ImageButton
+            android:id="@+id/player_more_actions"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.75"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/ic_baseline_more_vert_24_2" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/player_fragContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/TopTitle"></LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/player_actions"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/semitransparent"
+        android:backgroundTint="#CCCCCC"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageButton
+            android:id="@+id/player_play_mode"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/ic_round_repeat_24" />
+
+        <ImageButton
+            android:id="@+id/player_previous"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/ic_outline_skip_previous_24" />
+
+        <ImageButton
+            android:id="@+id/player_play"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_baseline_pause_circle_outline_40_large" />
+
+        <ImageButton
+            android:id="@+id/player_next"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/ic_outline_skip_next_24" />
+
+        <ImageButton
+            android:id="@+id/player_playList"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/transparent"
+            app:srcCompat="@drawable/ic_baseline_playlist_play_24" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/duration_layout"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/semitransparent"
+        android:backgroundTint="#FFCCCCCC"
+        app:layout_constraintBottom_toTopOf="@id/player_actions">
+
+        <TextView
+            android:id="@+id/player_start_time"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="00:00" />
+
+        <SeekBar
+            android:id="@+id/player_duration"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5.5"
+            android:thumbTint="@color/white" />
+
+        <TextView
+            android:id="@+id/player_end_time"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="99:99" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
